@@ -2,6 +2,5 @@ In this exercise, we will plan and configure a trust relationship between forest
 
 
 
-![Frame 133 (1)](https://github.com/user-attachments/assets/cc842027-a869-4827-a182-7fa8abfead0f)
-
+![Frame 133 (2)](https://github.com/user-attachments/assets/273851ff-9031-458e-b199-a092492fdb27)
 
