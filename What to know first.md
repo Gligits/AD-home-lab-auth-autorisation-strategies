@@ -25,7 +25,6 @@ The process of granting or denying access to resources based on permissions.
 Role-Based Access is a method of regulating access to resources based on the roles of individual users within an organization.
 The notion of groups means a collections of user accounts that can be assigned permissions collectively.
 
-![Frame 135 (2)](https://github.com/user-attachments/assets/cbc22e0f-b500-4992-852f-47bb6bd60c96)
 
 
 
