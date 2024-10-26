@@ -39,7 +39,15 @@ The choice of trust depends on the organization’s needs for resource sharing a
 When Division A created its network, they started with the **Europe Domain**, which is the root of the division. Then, they added the **France Domain** to manage country-specific resources. When the **France Domain** was created, a **parent/child trust** was automatically established between **Europe Domain** and **France Domain**.
 
 
-    The parent/child trust allows users and resources to flow between both domains without needing manual approval. For example, an employee in the **France Domain** can access a printer or file located in the **Europe Domain** because the domains trust each other. This trust is **transitive**, meaning that if a third child domain is added under **France**, it will also inherit this trust.
+    AUtomatic : The parent/child trust allows users and resources to flow 
+    between both domains without needing manual approval. 
+    
+    Two way trust : For example, an employee in the **France Domain** can 
+    access a printer or file located in the **Europe Domain** 
+    because the domains trust each other. 
+    
+    Transitive :meaning that if a third child domain is added under **France**, 
+    it will also inherit this trust.
 
 
 
@@ -52,7 +60,14 @@ In **Division A**, the company decides to add another **tree** of domains to man
 When the **Asia Domain** was added, a **tree-root trust** was automatically created between the **Asia Domain** and the **Europe Domain** (which is the forest root).
 
 
-    This type of trust allows the root domains of two **trees** within the same forest to trust each other. This means users in the **Asia Domain** can access resources in the **Europe Domain**, and vice versa. The trust is also transitive, meaning subdomains created under the **Asia tree** will also trust those in the **Europe tree**.
+    Automatic : This type of trust allows the root domains of two 
+    **trees** within the same forest to trust each other. 
+    
+    Two way trust : This means users in the **Asia Domain** can access 
+    resources in the **Europe Domain**, and vice versa. 
+    
+    Transitive : meaning subdomains created under the **Asia tree** will 
+    also trust those in the **Europe tree**.
 
 
 
@@ -64,11 +79,12 @@ In **Division A**, there are multiple domains in the forest, including **France 
 However, to speed up connections, the network administrator creates a **shortcut trust** directly between the **France Domain** and the **Italy Domain**.
 
 
-    A shortcut trust allows users from these two domains to communicate directly without going through the forest root, improving resource access performance. It avoids longer paths and optimizes resource management between domains.
-
-
-
-
+    Manual : A shortcut trust allows users from these two domains 
+    to communicate directly without going through the 
+    forest root.
+    one way trust 
+    Not Transitive 
+    
 ### Forest Trust
 Both **Division A** and **Division B** manage their own forests:
 - **Europe Forest** (Division A).
@@ -77,7 +93,11 @@ Both **Division A** and **Division B** manage their own forests:
 An interdivision project is launched to share some resources between the two divisions. Administrators decide to establish a **forest trust** between the **Europe Forest** and the **America Forest**.
 
 
-    A forest trust is manually configured to allow users in one forest to access resources in another forest. This enables, for example, an employee from **Division A** (Europe) to access files or databases in **Division B** (America). This trust is **transitive**, meaning that all domains within each forest can also trust each other.
+    Manual : A forest trust is manually configured to allow users 
+    in one forest to access resources in another forest. 
+    It's better to make it a two way trust for AGUDLP stategy reasons.
+    Transitive : meaning that all domains within each forest can also 
+    trust each other.
 
 
 
@@ -88,7 +108,11 @@ TechCorp collaborates with another company, **PartnerCorp**, which has its own e
 They create an **external trust** between TechCorp’s **Europe Domain** and PartnerCorp’s **Partner Domain**.
 
 
-    An external trust is used to connect two specific domains from different forests. Unlike a forest trust, it is **non-transitive**, meaning the trust does not extend to other domains in either forest. Only the two specific domains (in this case, **Europe Domain** and **Partner Domain**) can trust each other.
+    Manual : An external trust is used to connect two specific 
+    domains from different forests. 
+    Non-transitive : meaning the trust does not 
+    extend to other domains in either forest. Only the 
+    two specific domains can trust each other.
 
 
 ### Realm Trust
@@ -98,7 +122,10 @@ In another scenario, TechCorp uses a **UNIX server** with the Kerberos authentic
 A **realm trust** is established to enable authentication between TechCorp’s Active Directory and the UNIX server.
 
 
-    A realm trust allows a trust relationship between a Windows Active Directory domain and another system using Kerberos, like a UNIX server. It enables secure cross-system authentication for users.
+    A realm trust allows a trust relationship between 
+    a Windows Active Directory domain and another system using Kerberos, 
+    like a UNIX server. 
+    It enables secure cross-system authentication for users.
 
 
 
