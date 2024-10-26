@@ -32,6 +32,7 @@ The notion of groups means a collections of user accounts that can be assigned p
 
 Each type of trust is designed for a specific scenario.
 The choice of trust depends on the organization’s needs for resource sharing and security.
+
 ![Frame 135 (4)](https://github.com/user-attachments/assets/8b1e3ccb-c653-44df-9afd-d2247be366d5)
 
 ### Parent/Child Trust
